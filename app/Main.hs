@@ -1,9 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
+import Data.Foldable (traverse_)
 import Options.Applicative
 import Data.List.Split (splitOn)
 import System.Console.Haskeline (InputT, runInputT, defaultSettings, getInputLine, outputStrLn)
+
+type Repl a = InputT IO a
 
 data LearningItem = LearningItem
   {
@@ -44,19 +47,9 @@ main = do
      <> progDesc "Run the training set"
      <> header "run-training-set - a program to run the training set" )
 
-type Repl a = InputT IO a
-
 doTraining :: [LearningItem] -> IO ()
 doTraining items = do
-  runInputT defaultSettings $ loop items
-  where
-    loop :: [LearningItem] -> Repl ()
-    loop items = do
-      case items of
-        [] -> return ()
-        (item: rest) -> do
-          _result <- readAndCheck item
-          loop rest
+  runInputT defaultSettings $ traverse_ readAndCheck items
 
 printError :: String -> String -> Repl ()
 printError _expected actual = outputStrLn $ "Error: " ++ actual
