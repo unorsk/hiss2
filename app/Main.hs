@@ -1,4 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE StrictData #-}
+
 module Main where
 
 import Data.Foldable (traverse_)
@@ -48,7 +50,7 @@ main = do
      <> header "run-training-set - a program to run the training set" )
 
 doTraining :: [LearningItem] -> IO ()
-doTraining items = do
+doTraining items =
   runInputT defaultSettings $ traverse_ readAndCheck items
 
 printError :: String -> String -> Repl ()
