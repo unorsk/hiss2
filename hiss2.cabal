@@ -1,13 +1,12 @@
-cabal-version:   3.4
-name:            hiss2
-version:         0.1.0.0
-license:         MIT
-license-file:    LICENSE
-author:          andrii
-maintainer:      25188+unorsk@users.noreply.github.com
-category:        Text
-build-type:      Simple
-extra-doc-files: CHANGELOG.md
+cabal-version: 3.4
+name:          hiss2
+version:       0.1.0.0
+license:       MIT
+license-file:  LICENSE
+author:        andrii
+maintainer:    25188+unorsk@users.noreply.github.com
+category:      Text
+build-type:    Simple
 
 common warnings
   ghc-options: -Wall
