@@ -26,28 +26,27 @@ data CmdOptions = CmdOptions
 cmdOptionsParser :: Parser CmdOptions
 cmdOptionsParser = CmdOptions
   <$> strOption
-      ( long "training-set"
-     <> short 't'
-     <> metavar "TRAINING_SET"
-     <> help "Path to training set" )
+      ( long "file"
+     <> short 'f'
+     <> metavar "FILE_PATH"
+     <> help "Path to training file" )
   <*> option auto
-      ( long "times"
+      ( long "rounds"
      <> short 'n'
-     <> metavar "TIMES"
-     <> help "Number of times to run the training set" )
+     <> metavar "INTEGER"
+     <> help "Number of rounds for the set" )
 
 main :: IO ()
 main = do
   options <- execParser opts
   items <- readItemsFromFile (trainingSetPath options) "##"
-  putStrLn $ "Training set path: " ++ trainingSetPath options
-  putStrLn $ "Times: " ++ show (times options) <> " Items: " <> (show $ length $ items)
+  putStrLn $ "File: " ++ trainingSetPath options
+  putStrLn $ "Rounds: " ++ show (times options) <> " Items: " <> (show $ length $ items)
   doTraining items
   where
     opts = info (cmdOptionsParser <**> helper)
       ( fullDesc
-     <> progDesc "Run the training set"
-     <> header "run-training-set - a program to run the training set" )
+     <> progDesc "HISS2 - TUI for learning languages")
 
 doTraining :: [LearningItem] -> IO ()
 doTraining items =
