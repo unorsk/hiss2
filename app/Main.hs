@@ -36,13 +36,16 @@ cmdOptionsParser = CmdOptions
      <> metavar "INTEGER"
      <> help "Number of rounds for the set" )
 
+nTimes :: Int -> [a] -> [a]
+nTimes n l = concat $ replicate n l
+
 main :: IO ()
 main = do
   options <- execParser opts
   items <- readItemsFromFile (trainingSetPath options) "##"
   putStrLn $ "File: " ++ trainingSetPath options
   putStrLn $ "Rounds: " ++ show (times options) <> " Items: " <> (show $ length $ items)
-  doTraining items
+  doTraining $ nTimes (times options) items
   where
     opts = info (cmdOptionsParser <**> helper)
       ( fullDesc
