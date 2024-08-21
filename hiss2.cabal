@@ -22,3 +22,16 @@ executable hiss2
 
   hs-source-dirs:   app
   default-language: GHC2021
+
+executable cissp
+  import:           warnings
+  main-is:          Cissp.hs
+  build-depends:
+    , ansi-terminal
+    , base                  ^>=4.19.0.0
+    , optparse-applicative
+    , random-shuffle
+    , split
+
+  hs-source-dirs:   app
+  default-language: GHC2021
