@@ -5,9 +5,11 @@ EF##Exposure Factor!!Expected percentage of damage to an asset if a threat is re
 SLE##Single Loss Expectancy!!$SLE = AV * EF
 ARO##Annualized Rate of Occurrence!!Expected frequency of a threat occurring in a year
 ALE##Annualized Loss Expectancy!!$ALE = SLE * ARO
+SOAR##Security Orchestration, Automation, and Response!!Automates security operations, enhaces SIEM
 SIEM##Security Information and Event Management!!Combines SIM and SEM
 SIM##Security Information Management!!Collects, analyzes, and reports on log data
 SEM##Security Event Management!!Real-time monitoring for security events
+NIST SP 800-30##Risk Management Guide for Information Technology Systems
 NIST SP 800-37##Risk Management Framework for Federal Information Systems
 NIST SP 800-88##Guidelines for Media Sanitization
 NIST SP 800-122##Guide to Protecting the Confidentiality of Personally Identifiable Information
@@ -57,3 +59,39 @@ SCADA##Supervisory Control and Data Acquisition!!Used to control industrial proc
 MFP##Multi-Function Printer!!Printer that can also scan, copy, and fax
 DLP##Data Loss Prevention!!Prevents unauthorized data transfers
 DRP##Disaster Recovery Plan!!Plan for recovering from disasters
+CybOX##Cyber Observable eXpression!!Standard for expressing cyber observables
+STIX##Structured Threat Information eXpression!!Standard for expressing threat information
+TAXII##Trusted Automated eXchange of Indicator Information!!Standard for exchanging cyber threat information
+OpenIOC##Open Indicators of Compromise!!Standard for expressing indicators of compromise
+ISAC##Information Sharing and Analysis Center!!Organization that shares threat information
+CSIRT##Computer Security Incident Response Team!!Responds to security incidents
+CERT##Computer Emergency Response Team!!Responds to security incidents
+CFAA##Computer Fraud and Abuse Act!!Criminalizes unauthorized access to computers, 1986
+DMCA##Digital Millennium Copyright Act!!Criminalizes circumventing copyright protection mechanisms, 1998
+CALEA##Communications Assistance for Law Enforcement Act!!Requires telecommunications providers to assist law enforcement, 1994
+FISMA##Federal Information Security Management Act!!Requires federal agencies to secure information systems
+ITIL##Information Technology Infrastructure Library!!Provides best practices for IT service management
+Zachman Framework##Framework for enterprise architecture!![What, How, Where, Who, When, Why]
+CIDR##Classless Inter-Domain Routing!!Allocates IP addresses more efficiently
+MOU##Memorandum of Understanding!!Just documents an agreement
+SLA##Service Level Agreement!!Defines the level of service a customer can expect
+BPA##Business Partners Agreement!!Each parnters responsibilities and division of profits
+MOA##Memorandum of Agreement!!A bit more formal and detailed than an MOU
+MSA##Master Service Agreement!!All key terms that will govern future transactions
+SOW/WO##Statement of Work/Work Order!!Defines the work to be done and the deliverables
+SOC##System and Organization Controls!!A report after a Cloud Services Provider makes an audit
+SOC1##System and Organization Controls 1!!Provides assurance needed for financial reporting
+SOC2##System and Organization Controls 2!!Provides detailed assurance (often private, since contains sensitive details): security, availability, processing integrity, confidentiality, and privacy
+SOC3##System and Organization Controls 3!!Public report on controls: security, availability, and confidentiality, only high level
+Type 1 SOC##Describes controls that the serivce provider has in place and an auditor's opinion on the fairness of the presentation
+Type 2 SOC##Sames as 1 but also includes the results of testing the controls
+CSA##Cloud Security Alliance!!Provides best practices for securing cloud services
+SSAR 18##Statement on Standards for Attestation Engagements 18!!Defines the standards for SOC reports in the US
+ISAE 3402##International Standard on Assurance Engagements!!Defines the standards for SOC reports
+Bell LaPadula##Model for mandatory access control (confidentiality)!![Simple Security Property (no readup), *-Property (no write down)]
+Biba Model##Model for integrity!![Simple Integrity Property (no write up), *-Property (no read down)]
+TCSEC##Trusted Computer System Evaluation Criteria!!Orange Book, 1983
+ATO##Authority to Operate!!Permission to operate a system, for 3 years
+IATO##Interim Authority to Operate!!Temporary permission to operate a system, for 6 months
+IATT##Interim Authority to Test!!Temporary permission to test a system, for 6 months
+DATO##Denial of Authorization to Operate!!Permission to operate a system is denied
