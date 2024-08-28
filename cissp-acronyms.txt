@@ -95,3 +95,5 @@ ATO##Authority to Operate!!Permission to operate a system, for 3 years
 IATO##Interim Authority to Operate!!Temporary permission to operate a system, for 6 months
 IATT##Interim Authority to Test!!Temporary permission to test a system, for 6 months
 DATO##Denial of Authorization to Operate!!Permission to operate a system is denied
+TEMPEST##Protects against electromagnetic radiation emanations
+HVAC##Heating, Ventilation, and Air Conditioning!!System that provides heating and cooling
