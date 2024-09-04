@@ -17,6 +17,9 @@ CPTED##Crime Prevention Through Environmental Design!![Natural Surveillance, Nat
 XST##Cross-Site Tracing!!An attack that uses cross-site scripting and cross-site request forgery
 XSRF##Cross-Site Request Forgery!!An attack that tricks a user into performing an action on a different website
 XSS##Cross-Site Scripting!!An attack that injects malicious scripts into a website
+Bluesnarfing##Unauthorized access to a Bluetooth device, data theft
+Bluebugging##Unauthorized access to a Bluetooth device, control of the device
+Bluejackin##Sending unsolicited messages to a Bluetooth device
 Clark-Wilson##Model concerned with formalizing the notion of information integrity!![Subject, Object, Program (Interface)]
 Brewer and Nash##Model based on the Chinese Wall security policy, prevents conflicts of interest!!Allows access controls to change dynamically based on user actions
 Graham Denning##Model focuses on secure deletion and creation of both objects and subjects
@@ -80,6 +83,7 @@ DRP##Disaster Recovery Plan!!Plan for recovering from disasters
 CybOX##Cyber Observable eXpression!!Standard for expressing cyber observables
 STIX##Structured Threat Information eXpression!!Standard for expressing threat information
 TAXII##Trusted Automated eXchange of Indicator Information!!Standard for exchanging cyber threat information
+CAPEC##Common Attack Pattern Enumeration and Classification!!Standard for classifying attack patterns
 OpenIOC##Open Indicators of Compromise!!Standard for expressing indicators of compromise
 ISAC##Information Sharing and Analysis Center!!Organization that shares threat information
 CSIRT##Computer Security Incident Response Team!!Responds to security incidents
@@ -130,6 +134,7 @@ CMMI##Capability Maturity Model Integration!!Provides a framework for process im
 Pass-the-ticket##Attack that uses Kerberos tickets to gain unauthorized access, part of the Kerberos Golden Ticket attack
 Golden ticket##Attack that uses a forged Kerberos ticket granting ticket to gain unauthorized access
 Silver ticket##Attack that uses a forged service ticket to gain unauthorized access, part of the Kerberos Golden Ticket attack
+Meet-in-the-middle##Attack that uses two separate attacks against 2DES to find a key
 SAMM##Software Assurance Maturity Model!!Provides a framework for software security
 FAIR##Factor Analysis of Information Risk!!Provides a framework for risk management based on quantification
 COSO ERM##Committee of Sponsoring Organizations of the Treadway Commission Enterprise Risk Management!!Provides a framework for enterprise risk management, qualitative
@@ -148,7 +153,9 @@ CAN Bus##Controller Area Network Bus!!Used in vehicles for communication between
 ECU##Electronic Control Unit!!Used in vehicles for control systems
 CSMA/CD##Carrier Sense Multiple Access with Collision Detection!!Used in IEEE 802.3 Ethernet
 CSMA/CA##Carrier Sense Multiple Access with Collision Avoidance!!Used in IEEE 802.11 Wi-Fi
-EAP##Extensible Authentication Protocol!!Used in Wi-Fi networks 802.1X
+EAP##Extensible Authentication Protocol!!Used in Wi-Fi networks 802.1X, can be p2p
+PEAP##Protected Extensible Authentication Protocol!!Used in Wi-Fi networks 802.1X (wraps EAP with TLS tunnel)
+LEAP##Lightweight Extensible Authentication Protocol!!Used in Wi-Fi networks 802.1X (CISCO alternative to TKIP/WPA)
 IEEE 802.15.1##Bluetooth
 L2TP##Layer 2 Tunneling Protocol!!Used for VPNs
 L2F##Layer 2 Forwarding!!Cisco proprietary protocol
@@ -164,11 +171,12 @@ NAC##Network Access Control!!Controls access to a network
 Nearline##Storage that is not immediately available
 Line interactive##UPS that corrects voltage fluctuations
 NIACAP##National Information Assurance Certification and Accreditation Process!!US government process for certifying and accrediting systems
-Smurf attack##DDoS attack that uses ICMP
-Fraggle attack##DDoS attack that uses UDP
-Ping of Death##DDoS attack that uses ICMP
+Smurf attack##DDoS attack that uses spoofed ICMP
+Fraggle attack##DDoS attack that uses spoofed UDP
+Ping of Death##DDoS attack that uses ICMP, over 65536 bytes ping
+Land attack##DDoS attack that sets source and destination IP to the same address
 Teardrop attack##DDoS attack that uses IP fragmentation
-SYN flood##DDoS attack that uses TCP
+SYN Flood##DDoS attack that uses TCP, SYN requests
 Kerberos port##88
 PVC##Permanent Virtual Circuit!!Used in Frame Relay
 SVC##Switched Virtual Circuit!!Used in ATM
@@ -181,6 +189,8 @@ Real evidence##Physical evidence
 Testimonial evidence##Oral evidence
 Bandwidth##Constant!!Amount of data that can be transmitted in a fixed amount of time
 Throughput##Variable!!Actual amount of data that can be transmitted in a fixed amount of time
+Baseband##Single communication channel, digital (Ethernet)
+Broadband##Multiple communication channels, analog (TV, cable modem)
 Evidence##Relevant, material, and competent
 IPSec##Internet Protocol Security!!Encrypts IP packets
 PPTP##Point-to-Point Tunneling Protocol!!VPN protocol
@@ -188,7 +198,7 @@ Store-and-forward##Switching method that receives the entire frame before forwar
 Cut-through##Switching method that forwards the frame as soon as the destination is known!!Faster but no error checking
 Arbitration switching##Switching method that uses a bus to determine which device can send data!!Used in Token Ring
 ASLR##Address Space Layout Randomization!!Randomizes memory addresses to prevent buffer overflow attacks
-Extranet##Network that allows external users to access internal resources
+Extranet##Network that allows external users to access internal resources (b2b scenarios)
 Screened subnet##DMZ that uses two firewalls
 ESP##Encapsulating Security Payload!!IPSec protocol that encrypts the payload
 AH##Authentication Header!!IPSec protocol that authenticates the payload
@@ -200,3 +210,25 @@ LPD##Line Printer Daemon protocol, 515
 LPR##Line Printer Remote protocol, 515/9100
 SMB##Server Message Block, port 445
 RDP##Remote Desktop Protocol, port 3389
+SDLC##Synchronous Data Link Control (IBM)!!Master-slave, primary system polls secondary, Layer 2 protocol
+Token passing##Prevents collisions in ring networks
+TKIP##Temporal Key Integrity Protocol!!WPA encryption protocol, replacement for WEP
+WPA##Wi-Fi Protected Access!!Encryption protocol, replacement for WEP
+WEP##Wired Equivalent Privacy!!Insecure encryption protocol
+CCMP##Counter Mode with Cipher Block Chaining Message Authentication Code Protocol!!AES 128bit, replaces WEP/WPA/TKIP
+WPA2##Wi-Fi Protected Access 2!!CCMP, replacement for WPA
+WPA3##Wi-Fi Protected Access 3!!CCMP, replacement for WPA2
+iSCSI##Internet Small Computer System Interface!!Used for storage area networks, IP-based
+Private circuit##Dedicated physical circuit, good for security!!leased line, PPP, SLIP, ISDN, DSL
+Packet-switching##Data is broken into packets and sent over the network!!X.25, Frame Relay, ATM, SDLC, HDLC
+ATM##Asynchronous Transfer Mode!!Cell-based, good for voice and video
+Frame Relay##Packet-switching, good for bursty traffic
+X.25##Packet-switching, good for low-speed connections
+HDLC##High-Level Data Link Control!!Synchronous, bit-oriented, Layer 2 protocol
+UTM##Unified Threat Management!!May include IDS/IPS/TLS/SSL proxy, antivirus, antispam, content filtering (good for SMBs - small and medium businesses)
+BAS##Breach and Attack Simulation!!Simulates attacks to test defenses
+SIPS##Secure Session Initialization Protocol!!Used in VoIP
+SRTP##Secure Real-Time Transport Protocol
+ITU-T##International Telecommunication Union Telecommunication Standardization Sector
+X.500##Directory Access Protocol
+X.509##Certificate standard for PKI
