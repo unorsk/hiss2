@@ -192,7 +192,7 @@ Extranet##Network that allows external users to access internal resources
 Screened subnet##DMZ that uses two firewalls
 ESP##Encapsulating Security Payload!!IPSec protocol that encrypts the payload
 AH##Authentication Header!!IPSec protocol that authenticates the payload
-NAT-T##Network Address Translation Traversal!!IPSec protocol that allows NAT
+NAT-T##Network Addre Tssranslation Traversal!!IPSec protocol that allows NAT
 IKE##Internet Key Exchange!!IPSec protocol that negotiates keys
 ISAKMP##Internet Security Association and Key Management Protocol!!IPSec protocol that negotiates keys
 VXLAN##Virtual Extensible LAN!!Used in virtualized environments, good for multi-tenancy
