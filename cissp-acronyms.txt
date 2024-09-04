@@ -18,6 +18,9 @@ XST##Cross-Site Tracing!!An attack that uses cross-site scripting and cross-site
 XSRF##Cross-Site Request Forgery!!An attack that tricks a user into performing an action on a different website
 XSS##Cross-Site Scripting!!An attack that injects malicious scripts into a website
 Clark-Wilson##Model concerned with formalizing the notion of information integrity!![Subject, Object, Program (Interface)]
+Brewer and Nash##Model based on the Chinese Wall security policy, prevents conflicts of interest!!Allows access controls to change dynamically based on user actions
+Graham Denning##Model focuses on secure deletion and creation of both objects and subjects
+Harrison-Ruzzo-Ullman##Model focuses on assigning of object rights to subjects, as well as integrity
 GLBA##Gramm-Leach-Bliley Act!!Requires financial institutions to protect customer data
 FERPA##Family Educational Rights and Privacy Act!!Protects student education records
 SOX##Sarbanes-Oxley Act!!Requires accurate financial reporting
@@ -33,16 +36,30 @@ DAST##Dynamic Application Security Testing!!Analyzes running applications for se
 CCE##Common Configuration Enumeration!!Identifies security misconfigurations
 CPE##Common Platform Enumeration!!Identifies product names and versions
 CVE##Common Vulnerabilities and Exposures!!Identifies security vulnerabilities
+WOT##Web of Trust!!A reputation system for websites
+PKI##Public Key Infrastructure!!Manages public and private keys
+ECB##Electronic Codebook!!Symmetric encryption mode that is insecure
+CBC##Cipher Block Chaining!!Symmetric encryption mode that is secure
+GCM##Galois/Counter Mode, adds authentication capability, allows streaming block cyphers!!Symmetric encryption mode that is secure
 ElGamal##Asymmetric encryption algorithm based on the Diffie-Hellman key exchange, still secure
-RSA##Asymmetric encryption algorithm based on the difficulty of factoring large prime numbers, have to use > 2048-bit keys and not postquantum
-AES##Symmetric encryption algorithm that is fast and secure, use 256-bit keys
+RSA##Asymmetric encryption algorithm based on the difficulty of factoring large prime numbers!! < 1024 insecure, have to use > 2048-bit keys and not postquantum
+AES##Symmetric encryption algorithm that is fast and secure, Rijndal, use 256-bit keys
+PGP##Pretty Good Privacy!!Asymmetric, encrypts and signs email messages
+Blowfish##Symmetric encryption algorithm, replacement for DES, not secure
+Twofish##Symmetric encryption algorithm, replacement for Blowfish, still secure
+RC4##Symmetric stream encryption algorithm that is insecure, variable key length
 DES##Symmetric encryption algorithm that is outdated and insecure, use AES instead
 3DES##Symmetric encryption algorithm that is slow and secure, use AES instead
 MD5##Hashing algorithm that is outdated and insecure, use SHA-256 instead
 SHA##Secure Hash Algorithm!!SHA-1 is outdated and insecure, use SHA-256 instead
 SHA-1##Secure Hash Algorithm 1!! Outdated and insecure, use SHA-256 instead
+RIPEMD##RACE Integrity Primitives Evaluation Message Digest!!Hashing algorithm > 160bits is secure and in use
 Merkle-Hellman KnapSack##Asymmetric encryption algorithm that is insecure
-Diffie-Hellman##Key exchange algorithm that is still secure
+Diffie-Hellman##Key exchange algorithm that is still secure, inband
+ECDH##Elliptic Curve Diffie-Hellman
+bcrypt##Key stretching algorithm that is secure, based on Blowfish
+Key stretching##Technique that makes passwords more secure (salting, hashing, and stretching)!!Has to be applied at least 4000 times
+PBKDF2##Password-Based Key Derivation Function 2!!Key stretching algorithm
 CIS##Center for Internet Security!!Provides best practices for securing systems
 SRTP##Secure Real-Time Transport Protocol!!Encrypts VoIP traffic
 DISA##Direct Inward System Access!!Allows external callers to reach internal extensions
@@ -51,11 +68,12 @@ PBX##Private Branch Exchange!!Telephone system within an organization
 SW-CMM##Software Capability Maturity Model!!Provides a framework for software development
 RMM##Risk Maturity Model!!Provides a framework for risk management
 COBIT##Control Objectives for Information and Related Technologies!!Provides a framework for IT governance
+ITSM##IT Service Management!!Provides a framework for managing IT services
 ITIL##Information Technology Infrastructure Library!!Provides best practices for IT service management
 ISO 27001##Information Security Management System!!Provides a framework for information security management
 ISO 27002##Code of Practice for Information Security Controls!!Provides best practices for information security
 ISO 27005##Information Security Risk Management!!Provides a framework for information security risk management
-SCADA##Supervisory Control and Data Acquisition!!Used to control industrial processes
+SCADA##Supervisory Control and Data Acquisition!!Used to remotely control industrial processes
 MFP##Multi-Function Printer!!Printer that can also scan, copy, and fax
 DLP##Data Loss Prevention!!Prevents unauthorized data transfers
 DRP##Disaster Recovery Plan!!Plan for recovering from disasters
@@ -88,8 +106,8 @@ Type 2 SOC##Sames as 1 but also includes the results of testing the controls
 CSA##Cloud Security Alliance!!Provides best practices for securing cloud services
 SSAR 18##Statement on Standards for Attestation Engagements 18!!Defines the standards for SOC reports in the US
 ISAE 3402##International Standard on Assurance Engagements!!Defines the standards for SOC reports
-Bell LaPadula##Model for mandatory access control (confidentiality)!![Simple Security Property (no readup), *-Property (no write down)]
-Biba Model##Model for integrity!![Simple Integrity Property (no write up), *-Property (no read down)]
+Bell LaPadula##Model for mandatory access control (confidentiality), state machine!![Simple Security Property (no readup), *-Property (no write down)]
+Biba Model##Model for integrity, , state machine!![Simple Integrity Property (no write up), *-Property (no read down)]
 TCSEC##Trusted Computer System Evaluation Criteria!!Orange Book, 1983
 ATO##Authority to Operate!!Permission to operate a system, for 3 years
 IATO##Interim Authority to Operate!!Temporary permission to operate a system, for 6 months
@@ -97,3 +115,88 @@ IATT##Interim Authority to Test!!Temporary permission to test a system, for 6 mo
 DATO##Denial of Authorization to Operate!!Permission to operate a system is denied
 TEMPEST##Protects against electromagnetic radiation emanations
 HVAC##Heating, Ventilation, and Air Conditioning!!System that provides heating and cooling
+CASB##Cloud Access Security Broker!!Monitors and manages security for cloud services
+MSP##Managed Service Provider!!Provides IT services to customers
+MSSP##Managed Security Service Provider!!Provides security services to customers
+MAC##Mandatory Access Control!!Access control based on security labels
+HMAC##Hash-based Message Authentication Code!!Hash-based MAC
+Bllowfish##Symmetric encryption algorithm that is fast and secure, not as performant as AES
+AES-GCM##Advanced Encryption Standard - Galois/Counter Mode!!Symmetric encryption algorithm that is fast and secure, use 256-bit keys, and authenticated encryption
+ISO 310000##Risk Management!!Provides a framework for risk management, not specific to IT, qualitative
+DCCP##Datagram Congestion Control Protocol!!Used for streaming media
+SCTP##Stream Control Transmission Protocol!!Used for telephony signaling
+COTS##Commercial Off-The-Shelf!!Software that is purchased and used as is
+CMMI##Capability Maturity Model Integration!!Provides a framework for process improvement
+Pass-the-ticket##Attack that uses Kerberos tickets to gain unauthorized access, part of the Kerberos Golden Ticket attack
+Golden ticket##Attack that uses a forged Kerberos ticket granting ticket to gain unauthorized access
+Silver ticket##Attack that uses a forged service ticket to gain unauthorized access, part of the Kerberos Golden Ticket attack
+SAMM##Software Assurance Maturity Model!!Provides a framework for software security
+FAIR##Factor Analysis of Information Risk!!Provides a framework for risk management based on quantification
+COSO ERM##Committee of Sponsoring Organizations of the Treadway Commission Enterprise Risk Management!!Provides a framework for enterprise risk management, qualitative
+CIS Controls##Center for Internet Security Controls!!Provides best actionable practices for securing systems
+TPM##Trusted Platform Module!!Hardware-based security chip
+TCB##Trusted Computing Base!!Hardware, software, and firmware that is trusted
+HSM##Hardware Security Module!!Hardware-based security device
+UEFI##Unified Extensible Firmware Interface!!Modern replacement for BIOS
+Secure boot##Ensures that only trusted software is loaded during the boot process
+Measured boot##Logs the boot process and compares it to a known good state
+EMP##Electromagnetic Pulse!!Can damage electronic equipment
+ICS##Industrial Control System!!Used to control industrial processes
+DCS##Distributed Control System!!Used to control industrial processes (water, power generation)
+PLC##Programmable Logic Controller!!Used to control industrial processes
+CAN Bus##Controller Area Network Bus!!Used in vehicles for communication between ECUs
+ECU##Electronic Control Unit!!Used in vehicles for control systems
+CSMA/CD##Carrier Sense Multiple Access with Collision Detection!!Used in IEEE 802.3 Ethernet
+CSMA/CA##Carrier Sense Multiple Access with Collision Avoidance!!Used in IEEE 802.11 Wi-Fi
+EAP##Extensible Authentication Protocol!!Used in Wi-Fi networks 802.1X
+IEEE 802.15.1##Bluetooth
+L2TP##Layer 2 Tunneling Protocol!!Used for VPNs
+L2F##Layer 2 Forwarding!!Cisco proprietary protocol
+RFC 1087##Ethics and the Internet!!RFC on ethics
+Kerckhoffs' Principle##Cryptographic principle that the security of a system should not depend on the secrecy of the algorithm
+Shannon's Maxim##Cryptographic principle that the security of a system should depend on the secrecy of the key
+Locard's Exchange Principle##Forensic principle that every contact leaves a trace
+Defense-in-depth##Security principle that uses multiple layers of security controls
+SASE##Secure Access Service Edge!!Combines network security and wide area networking
+MTTF##Mean Time to Failure!!Average time a nonrepairable component will last
+MTBF##Mean Time Between Failures!!Average time between failures of a repairable component
+NAC##Network Access Control!!Controls access to a network
+Nearline##Storage that is not immediately available
+Line interactive##UPS that corrects voltage fluctuations
+NIACAP##National Information Assurance Certification and Accreditation Process!!US government process for certifying and accrediting systems
+Smurf attack##DDoS attack that uses ICMP
+Fraggle attack##DDoS attack that uses UDP
+Ping of Death##DDoS attack that uses ICMP
+Teardrop attack##DDoS attack that uses IP fragmentation
+SYN flood##DDoS attack that uses TCP
+Kerberos port##88
+PVC##Permanent Virtual Circuit!!Used in Frame Relay
+SVC##Switched Virtual Circuit!!Used in ATM
+FRR##False rejection rate!!Biometric error rate
+FAR##False acceptance rate!!Biometric error rate
+CER##Crossover Error Rate!!Biometric error rate
+Parol evidence rule##Rule that written contracts cannot be changed by oral evidence
+Best evidence rule##Rule that the original document is the best evidence (copy can be used if the original is lost)
+Real evidence##Physical evidence
+Testimonial evidence##Oral evidence
+Bandwidth##Constant!!Amount of data that can be transmitted in a fixed amount of time
+Throughput##Variable!!Actual amount of data that can be transmitted in a fixed amount of time
+Evidence##Relevant, material, and competent
+IPSec##Internet Protocol Security!!Encrypts IP packets
+PPTP##Point-to-Point Tunneling Protocol!!VPN protocol
+Store-and-forward##Switching method that receives the entire frame before forwarding!!Good for error checking
+Cut-through##Switching method that forwards the frame as soon as the destination is known!!Faster but no error checking
+Arbitration switching##Switching method that uses a bus to determine which device can send data!!Used in Token Ring
+ASLR##Address Space Layout Randomization!!Randomizes memory addresses to prevent buffer overflow attacks
+Extranet##Network that allows external users to access internal resources
+Screened subnet##DMZ that uses two firewalls
+ESP##Encapsulating Security Payload!!IPSec protocol that encrypts the payload
+AH##Authentication Header!!IPSec protocol that authenticates the payload
+NAT-T##Network Address Translation Traversal!!IPSec protocol that allows NAT
+IKE##Internet Key Exchange!!IPSec protocol that negotiates keys
+ISAKMP##Internet Security Association and Key Management Protocol!!IPSec protocol that negotiates keys
+VXLAN##Virtual Extensible LAN!!Used in virtualized environments, good for multi-tenancy
+LPD##Line Printer Daemon protocol, 515
+LPR##Line Printer Remote protocol, 515/9100
+SMB##Server Message Block, port 445
+RDP##Remote Desktop Protocol, port 3389
