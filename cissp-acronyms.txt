@@ -26,7 +26,7 @@ Graham Denning##Model focuses on secure deletion and creation of both objects an
 Harrison-Ruzzo-Ullman##Model focuses on assigning of object rights to subjects, as well as integrity
 GLBA##Gramm-Leach-Bliley Act!!Requires financial institutions to protect customer data
 FERPA##Family Educational Rights and Privacy Act!!Protects student education records
-SOX##Sarbanes-Oxley Act!!Requires accurate financial reporting
+SOX##Sarbanes-Oxley Act!!Requires accurate financial reporting for public companies
 HIPAA##Health Insurance Portability and Accountability Act!!Protects health information
 PCI DSS##Payment Card Industry Data Security Standard!!Protects credit card data
 PII##Personally Identifiable Information !!Information that can be used to identify an individual
@@ -71,6 +71,8 @@ PBX##Private Branch Exchange!!Telephone system within an organization
 SW-CMM##Software Capability Maturity Model!!Provides a framework for software development
 RMM##Risk Maturity Model!!Provides a framework for risk management
 COBIT##Control Objectives for Information and Related Technologies!!Provides a framework for IT governance
+SABSA##Sherwood Applied Business Security Architecture!!Provides a framework for security architecture
+FedRAMP##Federal Risk and Authorization Management Program!!Provides a framework for cloud security
 ITSM##IT Service Management!!Provides a framework for managing IT services
 ITIL##Information Technology Infrastructure Library!!Provides best practices for IT service management
 ISO 27001##Information Security Management System!!Provides a framework for information security management
@@ -111,7 +113,7 @@ CSA##Cloud Security Alliance!!Provides best practices for securing cloud service
 SSAR 18##Statement on Standards for Attestation Engagements 18!!Defines the standards for SOC reports in the US
 ISAE 3402##International Standard on Assurance Engagements!!Defines the standards for SOC reports
 Bell LaPadula##Model for mandatory access control (confidentiality), state machine!![Simple Security Property (no readup), *-Property (no write down)]
-Biba Model##Model for integrity, , state machine!![Simple Integrity Property (no write up), *-Property (no read down)]
+Biba Model##Model for integrity, state machine!![Simple Integrity Property (no write up), *-Property (no read down)]
 TCSEC##Trusted Computer System Evaluation Criteria!!Orange Book, 1983
 ATO##Authority to Operate!!Permission to operate a system, for 3 years
 IATO##Interim Authority to Operate!!Temporary permission to operate a system, for 6 months
@@ -180,8 +182,8 @@ SYN Flood##DDoS attack that uses TCP, SYN requests
 Kerberos port##88
 PVC##Permanent Virtual Circuit!!Used in Frame Relay
 SVC##Switched Virtual Circuit!!Used in ATM
-FRR##False rejection rate!!Biometric error rate
-FAR##False acceptance rate!!Biometric error rate
+FRR##False Rejection Rate!!Biometric error rate
+FAR##False Acceptance Rate!!Biometric error rate
 CER##Crossover Error Rate!!Biometric error rate
 Parol evidence rule##Rule that written contracts cannot be changed by oral evidence
 Best evidence rule##Rule that the original document is the best evidence (copy can be used if the original is lost)
@@ -202,7 +204,7 @@ Extranet##Network that allows external users to access internal resources (b2b s
 Screened subnet##DMZ that uses two firewalls
 ESP##Encapsulating Security Payload!!IPSec protocol that encrypts the payload
 AH##Authentication Header!!IPSec protocol that authenticates the payload
-NAT-T##Network Addre Tssranslation Traversal!!IPSec protocol that allows NAT
+NAT-T##Network Address Translation Traversal!!IPSec protocol that allows NAT
 IKE##Internet Key Exchange!!IPSec protocol that negotiates keys
 ISAKMP##Internet Security Association and Key Management Protocol!!IPSec protocol that negotiates keys
 VXLAN##Virtual Extensible LAN!!Used in virtualized environments, good for multi-tenancy
@@ -232,3 +234,7 @@ SRTP##Secure Real-Time Transport Protocol
 ITU-T##International Telecommunication Union Telecommunication Standardization Sector
 X.500##Directory Access Protocol
 X.509##Certificate standard for PKI
+STRIDE##Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege!!Threat modeling
+DREAD##Damage, Reproducibility, Exploitability, Affected Users, Discoverability!!Risk assessment
+PASTA##Process for Attack Simulation and Threat Analysis!!Threat modeling, [Preparation, Analysis, Simulation, Threat Analysis]
+Risk based access control##Access control based on risk!!for example, MFA for high-risk users

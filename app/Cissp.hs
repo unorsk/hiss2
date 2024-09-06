@@ -40,12 +40,15 @@ navigateFlashcards cards index showBack = do
     let content = if showBack then [front card] ++ back card else [front card]
     -- let displayText = domain card ++ "\n\n" ++ content
     let displayText = content
-    let footer = "Card " ++ show (index + 1) ++ " of " ++ show (length cards)
+    let nav = "[h ←] [l →] [Space] [^c] "
+    let status = " " ++ show (index + 1) ++ " of " ++ show (length cards) ++ " "
     (termHeight, termWidth) <- getTermSize
     mapM_ (\t -> putStrLn $ centerText termWidth t) displayText
     setCursorPosition termHeight 0
     setSGR [SetColor Background Vivid Green, SetColor Foreground Vivid White]
-    putStr $ footer <> (replicate (termWidth - length footer) ' ')
+    putStr $ nav <> (replicate (termWidth - (length nav) - (length status)) ' ')
+    setSGR [SetColor Background Vivid Red, SetColor Foreground Vivid White]
+    putStr status
     setSGR [Reset]
     hFlush stdout
     c <- getChar
